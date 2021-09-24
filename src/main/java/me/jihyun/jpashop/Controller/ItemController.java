@@ -16,12 +16,6 @@ public class ItemController {
 
     private final ItemService itemService;
 
-//    @GetMapping("/items/new")
-//    public String createForm(Model model) {
-//        model.addAttribute("form", new BookForm());
-//        return "items/createItemForm";
-//    }
-
     @PostMapping("/items/new")
     public Long create(@Valid BookRequestDto requestDto) {
         Book book = new Book();
@@ -42,24 +36,6 @@ public class ItemController {
         return itemService.findItems();
 
     }
-
-//    @GetMapping("/items/{itemId}/edit")
-//    public String updateItemForm(@PathVariable("itemId") Long itemId, Model model) {
-//        Book item = (Book) itemService.findOne(itemId);
-//
-//        BookForm form = new BookForm();
-//        form = new BookForm();
-//
-//        form.setId(item.getId());
-//        form.setName(item.getName());
-//        form.setAuthor(item.getAuthor());
-//        form.setPrice(item.getPrice());
-//        form.setStockQuantity(item.getStockQuantity());
-//        form.setIsbn(item.getIsbn());
-//
-//        model.addAttribute("form", form);
-//        return "items/updateItemForm";
-//    }
 
     @PostMapping("/items/{itemId}/edit")
     public String updateItem(@PathVariable("itemId") Long itemId, @ModelAttribute("form") BookRequestDto requestDto) {

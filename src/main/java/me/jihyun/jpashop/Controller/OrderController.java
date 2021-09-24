@@ -24,17 +24,6 @@ public class OrderController {
 
     private final ItemService itemService;
 
-//    @GetMapping("/order")
-//    public String createForm(Model model) {
-//        List<Member> members = memberService.findMembers();
-//        List<Item> items = itemService.findItems();
-//
-//        model.addAttribute("members", members);
-//        model.addAttribute("items", items);
-//
-//        return "order/orderForm";
-//    }
-
     @PostMapping("/order")
     public Long order(@RequestParam("memberId") Long memberId,
                         @RequestParam("itemId") Long itemId,

@@ -19,12 +19,6 @@ public class MemberController {
 
     private final MemberService memberService;
 
-//    @GetMapping("members/new")
-//    public String creatForm(Model model) {
-//        model.addAttribute("memberForm", new MemberForm());
-//        return "members/createMemberForm";
-//    }
-
     @PostMapping("members/new")
     public Long create(@Valid MemberCreateRequestDto requestDto, BindingResult result) {
 
