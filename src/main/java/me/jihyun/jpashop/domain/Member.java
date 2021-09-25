@@ -18,6 +18,8 @@ public class Member {
 
     private String username;
 
+    private Role role;
+
     /*
     Embeddable - Embedded
     - Entity에서 속성이 가질 타입을 정의하고 사용할 때 사용하는 애노테이션
