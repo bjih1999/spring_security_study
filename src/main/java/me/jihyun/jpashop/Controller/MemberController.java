@@ -3,6 +3,7 @@ package me.jihyun.jpashop.Controller;
 import lombok.RequiredArgsConstructor;
 import me.jihyun.jpashop.domain.Address;
 import me.jihyun.jpashop.domain.Member;
+import me.jihyun.jpashop.domain.UserGroup;
 import me.jihyun.jpashop.service.MemberService;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
